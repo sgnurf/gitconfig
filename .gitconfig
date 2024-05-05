@@ -1,0 +1,23 @@
+
+[alias]
+	logt = log --pretty=format:\"%C(auto)%h %ad | %s%n[%an] %d%n\" --graph --date=short -n 5
+	logf = log --pretty=format:\"%C(auto)%h by %an %n Parent: %p%n Refs: %d%n Subject: %s%n\" --date=short -n 5
+	last = log -l HEAD
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	sh = show --name-status
+	mff = merge --ff-only
+	mdr = merge --no-commit --no-ff
+	rh = reset --hard
+	set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+	s = status --short --branch
+	c = "!git commit -m "
+	amend = commit --amend --no-edit
+	staash = stash --all
+	blaame = blame -C -C -C
+
+
+[init]
+	defaultBranch = main
